@@ -90,25 +90,30 @@ body {
     align-items: stretch;
   }
 
-  nav.navbar > .navbar-brand {
+  nav.navbar .navbar-toggler, .navbar-brand, .navbar-nav {
     flex: 1;
+    flex-grow: 0;
   }
 
-  nav.navbar > .navbar-nav {
-    flex: 1 100%;
+  nav.navbar  .navbar-nav {
     text-align: right;
   }
 
+  nav.navbar ul.navbar-nav li.dropdown .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+
   .sidebar {
-    position: static;
+    position: fixed;
+    bottom: auto;
   }
 
   .sidebar-sticky {
     height: auto;
-    padding-top: 3.5rem;
   }
 
   [role="main"] {
-    padding-top: 6px;
+    padding-top: 50px;
   }
 }
